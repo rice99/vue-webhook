@@ -12,4 +12,4 @@ echo "删除旧容器"
 docker stop vue-back-container
 docker rm vue-back-container
 echo "启动新容器"
-docker container run -p 3000:3000 -d --name vue-back-container vue-back:1.0
+docker container run -p 3005:3005 -d --name vue-back-container vue-back:1.0
