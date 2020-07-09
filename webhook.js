@@ -26,7 +26,8 @@ let server = http.createServer(function(req,res){
       //===========分割线===================
       if(event === 'push'){
         let payload = JSON.parse(body);
-        let child = spawn('sh', [`./${payload.repository.name}.sh`]);
+        // let child = spawn('sh', [`./${payload.repository.name}.sh`]);
+        let child = spawn('sh', ['./cicd.sh']);
         let buffers = [];
         child.stdout.on('data', function (buffer) { buffers.push(buffer)});
         child.stdout.on('end', function () {
